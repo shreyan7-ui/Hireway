@@ -1104,13 +1104,25 @@ footer {
 /* Common phone sizes: iPhone 14/15/16, Galaxy S/ A, plus small Androids */
 @media (max-width: 650px) {
   .navin {
-    gap: 12px;
+    gap: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
   .navcta {
-    width: 100%;
+    width: auto;
+    margin-left: auto;
+    padding: 10px 12px;
+    font-size: 0.8rem;
   }
   .links {
-    display: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    order: 3;
   }
   .wrap {
     width: min(92%, 540px);
