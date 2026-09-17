@@ -8,6 +8,7 @@ export default function ResourceRequestPage() {
     const [notice, setNotice] = useState('');
     const [pending, setPending] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [skillSet, setSkillSet] = useState('');
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -57,6 +58,7 @@ export default function ResourceRequestPage() {
             );
 
             formRef.current.reset();
+            setSkillSet('');
         } catch (error) {
             setNotice(
                 error.message ||
@@ -74,16 +76,6 @@ export default function ResourceRequestPage() {
                     <div className="eyebrow reveal">
                         Client resource desk
                     </div>
-
-                    <h1>
-                        Something around your hired resource needs attention.
-                    </h1>
-
-                    <p>
-                        Open one ticket for delivery issues, replacement needs,
-                        availability, onboarding, billing or contract questions.
-                        We&rsquo;ll route it to the right HIREWAY team.
-                    </p>
 
                     <div className="supportchips reveal">
                         <span>
@@ -118,13 +110,10 @@ export default function ResourceRequestPage() {
                             </h2>
 
                             <p className="reveal">
-                                Use this desk for any resource already engaged
-                                through HIREWAY. Add the resource name or ID
-                                whenever possible so the operations team can
-                                identify the engagement quickly.
+                                Use this desk to raise the ticket for your demands
                             </p>
 
-                            <div className="step-list">
+                            {/* <div className="step-list">
                                 <div className="step reveal">
                                     <b>
                                         01
@@ -174,7 +163,7 @@ export default function ResourceRequestPage() {
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         <form
@@ -211,62 +200,94 @@ export default function ResourceRequestPage() {
                             <input
                                 name="phone"
                                 placeholder="Phone number"
+                                required
                             />
 
-                            <div className="formrow">
-                                <input
-                                    name="resource_name"
-                                    placeholder="Resource name"
-                                />
+                            <input
+                                name="resource_name"
+                                type="number"
+                                min="1"
+                                step="1"
+                                inputMode="numeric"
+                                placeholder="Total number of resources required"
+                                required
+                            />
 
+                            <div className="budget-field">
                                 <input
                                     name="resource_id"
-                                    placeholder="Resource / CV ID"
+                                    type="number"
+                                    min="0"
+                                    step="0.01"
+                                    inputMode="decimal"
+                                    placeholder="Budget"
+                                    required
                                 />
+
+                                <select
+                                    name="budget_unit"
+                                    defaultValue=""
+                                    required
+                                >
+                                    <option value="">
+                                        Unit
+                                    </option>
+
+                                    <option>LPM</option>
+                                    <option>LPA</option>
+                                    <option>Per hour</option>
+                                    <option>Per day</option>
+                                </select>
                             </div>
 
                             <select
-                                name="request_type"
+                                name="skill_set"
+                                value={skillSet}
+                                onChange={event => setSkillSet(event.target.value)}
                                 required
-                                defaultValue=""
                             >
                                 <option value="">
-                                    Request type
+                                    Skill Set
                                 </option>
 
-                                <option>
-                                    Resource replacement
-                                </option>
-
-                                <option>
-                                    Performance / delivery
-                                </option>
-
-                                <option>
-                                    Attendance / availability
-                                </option>
-
-                                <option>
-                                    Onboarding / access
-                                </option>
-
-                                <option>
-                                    Timesheet / billing
-                                </option>
-
-                                <option>
-                                    PO / contract
-                                </option>
-
-                                <option>
-                                    Other
-                                </option>
+                                <option>SAP</option>
+                                <option>ServiceNow</option>
+                                <option>Python</option>
+                                <option>UI/UX Developer</option>
+                                <option>Workday</option>
+                                <option>Salesforce</option>
+                                <option>Devops</option>
+                                <option>Microsoft Azure</option>
+                                <option>AI/ML</option>
+                                <option>Power BI</option>
+                                <option>Data Engineer</option>
+                                <option>Gen AI</option>
+                                <option>Other</option>
                             </select>
+
+                            {skillSet === 'Other' ? (
+                                <input
+                                    name="request_type"
+                                    placeholder="Enter your skill set"
+                                    required
+                                />
+                            ) : (
+                                <input
+                                    type="hidden"
+                                    name="request_type"
+                                    value={skillSet}
+                                />
+                            )}
 
                             <select
                                 name="priority"
-                                defaultValue="Medium"
+                                defaultValue=""
+                                required
                             >
+                                <option value="">
+                                    Priority
+                                </option>
+
                                 <option>
                                     Medium
                                 </option>
@@ -284,15 +305,32 @@ export default function ResourceRequestPage() {
                                 </option>
                             </select>
 
-                            <input
-                                name="subject"
-                                placeholder="Request subject"
-                                required
-                            />
+                            <div className="input-with-icon">
+                                <span aria-hidden="true">📍</span>
+
+                                <input
+                                    name="subject"
+                                    placeholder="Preferred Location"
+                                    required
+                                />
+                            </div>
+
+                            <div className="date-field">
+                                <label htmlFor="requirement-date">
+                                    Date of requirement
+                                </label>
+
+                                <input
+                                    id="requirement-date"
+                                    name="requirement_date"
+                                    type="date"
+                                    required
+                                />
+                            </div>
 
                             <textarea
                                 name="details"
-                                placeholder="Describe the issue, impact and what outcome you need"
+                                placeholder="Job Description"
                                 required
                             ></textarea>
 

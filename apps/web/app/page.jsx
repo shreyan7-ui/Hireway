@@ -1,4 +1,5 @@
 import SiteChrome from './_components/SiteChrome';
+import ContactUsForm from './_components/ContactUsForm';
 
 export const metadata = {
     title: 'HIREWAY | Enterprise IT Services & Consulting'
@@ -8,6 +9,13 @@ export default function HomePage() {
     return (
         <SiteChrome>
             <header className="hero">
+                <div className="hero-logo-watermark" aria-hidden="true">
+                    <img
+                        src="/assets/startup-logo.png"
+                        alt=""
+                    />
+                </div>
+
                 <div className="wrap">
                     <div className="eyebrow reveal">
                         IT Services · Consulting · Workforce
@@ -17,11 +25,49 @@ export default function HomePage() {
                         Enterprise technology teams, built for momentum.
                     </h1>
 
-                    <p>
-                        HIREWAY helps organizations scale critical technology
-                        programs with high-quality professionals, consulting
-                        expertise and flexible C2C, C2H and FTE engagement models.
-                    </p>
+                    <div className="hero-copy">
+                        <p>
+                            At HIREWAY, we help organizations build stronger teams by connecting
+                            them with quality, skilled professionals tailored to their exact
+                            business and technical requirements.
+                        </p>
+
+                        <p>
+                            We focus on more than just filling positions. We understand the
+                            requirement, identify the right expertise, and deliver profiles that
+                            align with it.
+                        </p>
+
+                        <ul className="hero-points">
+                            <li>
+                                <strong>Pan-India Talent Reach</strong>
+                                Professionals available across major locations in India.
+                            </li>
+                            <li>
+                                <strong>Requirement-Based Hiring</strong>
+                                Profiles aligned with your specific skill set, experience, and
+                                project needs.
+                            </li>
+                            <li>
+                                <strong>Quality-First Approach</strong>
+                                Relevant and reliable profiles rather than bulk submissions.
+                            </li>
+                            <li>
+                                <strong>Specialized IT Talent</strong>
+                                Professionals across diverse technologies, platforms, and business
+                                functions.
+                            </li>
+                            <li>
+                                <strong>Flexible Resource Support</strong>
+                                Helping organizations scale teams based on project and business
+                                requirements.
+                            </li>
+                        </ul>
+
+                        <p className="hero-closing">
+                            Your requirement defines the need. Our network finds the professional.
+                        </p>
+                    </div>
 
                     <div className="actions reveal">
                         <a className="btn primary" href="/contact">
@@ -34,10 +80,10 @@ export default function HomePage() {
                     </div>
 
                     <div className="stats">
-                        <div className="stat tilt reveal">
+                        {/* <div className="stat tilt reveal">
                             <b>150+</b>
                             <span>Technology professionals</span>
-                        </div>
+                        </div> */}
 
                         <div className="stat tilt reveal">
                             <b>25+</b>
@@ -246,6 +292,29 @@ export default function HomePage() {
                         >
                             Start a requirement ↗
                         </a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div className="wrap">
+                    <div className="contactgrid">
+                        <div className="copy">
+                            <div className="eyebrow reveal">
+                                Contact us
+                            </div>
+
+                            <h2 className="reveal">
+                                Let&rsquo;s connect.
+                            </h2>
+
+                            <p className="reveal">
+                                Share your name and email ID. Our team will contact
+                                you using the phone or WhatsApp number below.
+                            </p>
+                        </div>
+
+                        <ContactUsForm />
                     </div>
                 </div>
             </section>

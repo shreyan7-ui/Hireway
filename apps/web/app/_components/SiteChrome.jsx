@@ -194,15 +194,18 @@ export default function SiteChrome({ children }) {
             <nav className="nav">
                 <div className="wrap navin">
                     <a className="brand" href="/">
-                        HIRE<span>WAY</span>
+                        <img
+                            src="/assets/startup-logo.png"
+                            alt="HIREWAY home"
+                        />
                     </a>
 
                     <div className="links">
-                        <a href="/services">Services</a>
-                        <a href="/about">About</a>
-                        <a href="/clients">Clients</a>
-                        <a href="/careers">Careers</a>
-                        <a href="/resource-request">Resource Desk</a>
+                        {/* <a href="/about">ABOUT</a> */}
+                        <a href="/services">SERVICES</a>
+                        {/* <a href="/clients">Clients</a> */}
+                        {/* <a href="/careers">Careers</a> */}
+                        <a href="/resource-request">RESOURCE DESK/REQUIREMENT</a>
                     </div>
 
                     <a className="navcta" href="/contact">

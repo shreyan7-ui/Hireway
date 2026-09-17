@@ -4,6 +4,8 @@ import { SupabaseService } from '../supabase/supabase.service.js';
 export interface CreateLeadDto {
     name?: string;
     email?: string;
+    phone?: string;
+    whatsapp?: string;
     company?: string;
     model?: string;
     message?: string;
@@ -14,11 +16,19 @@ export class LeadsService {
     constructor(private readonly supabase: SupabaseService) {}
 
     async create(dto: CreateLeadDto) {
-        const { name, email, company, model, message } = dto || {};
+        const {
+            name,
+            email,
+            phone,
+            whatsapp,
+            company,
+            model,
+            message
+        } = dto || {};
 
-        if (!name || !email || !message) {
+        if (!name || !email || (!message && (!phone || !whatsapp))) {
             throw new BadRequestException(
-                'name, email and message are required'
+                'name and email, plus either a message or phone and whatsapp, are required'
             );
         }
 
@@ -27,9 +37,11 @@ export class LeadsService {
             .insert({
                 name,
                 email,
+                phone,
+                whatsapp,
                 company: company || '',
                 model: model || '',
-                message
+                message: message || ''
             })
             .select('id, created_at')
             .single();
@@ -45,7 +57,7 @@ export class LeadsService {
         const { data, error } = await this.supabase.client
             .from('leads')
             .select(
-                'id, name, email, company, model, message, status, created_at'
+                'id, name, email, phone, whatsapp, company, model, message, status, created_at'
             )
             .order('created_at', { ascending: false })
             .limit(limit);

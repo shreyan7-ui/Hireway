@@ -18,9 +18,9 @@ export default function CardsPage({
                         {heading}
                     </h1>
 
-                    <p>
+                    <div className="service-intro">
                         {intro}
-                    </p>
+                    </div>
                 </div>
             </section>
 
