@@ -1,0 +1,21 @@
+{
+  "name": "hireway",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev": "npm-run-all -p dev:web dev:api",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace apps/api run start:dev",
+    "build": "npm --workspace apps/web run build && npm --workspace apps/api run build",
+    "db:migrate": "npm --workspace apps/api run db:migrate",
+    "db:seed": "npm --workspace apps/api run db:seed",
+    "db:reset": "npm --workspace apps/api run db:reset"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

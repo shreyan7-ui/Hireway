@@ -1,0 +1,150 @@
+{
+  "info": {
+    "name": "Hireway (local)",
+    "description": "Local API for the Hireway NestJS backend backed by Supabase Postgres. Point baseUrl at your NestJS dev server (default http://localhost:3001) and set adminToken to the ADMIN_TOKEN from apps/api/.env.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Public",
+      "item": [
+        {
+          "name": "Create lead",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/leads",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "leads"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ada Lovelace\",\n  \"email\": \"ada@example.com\",\n  \"company\": \"Analytical Engines\",\n  \"model\": \"Staff Augmentation\",\n  \"message\": \"We need 3 ServiceNow developers for 6 months.\"\n}"
+            }
+          }
+        },
+        {
+          "name": "List active jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/jobs",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "jobs"]
+            }
+          }
+        },
+        {
+          "name": "Submit application",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/applications",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "applications"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"job_id\": null,\n  \"name\": \"Grace Hopper\",\n  \"email\": \"grace@example.com\",\n  \"phone\": \"+1-555-0100\",\n  \"resume_url\": \"https://example.com/resume.pdf\",\n  \"cover_note\": \"Excited to apply.\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Submit resource request",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/resource-requests",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "resource-requests"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company\": \"Acme Corp\",\n  \"contact_name\": \"John Doe\",\n  \"email\": \"john@acme.example\",\n  \"phone\": \"+1-555-0111\",\n  \"resource_name\": \"\",\n  \"resource_id\": \"\",\n  \"request_type\": \"New Requirement\",\n  \"priority\": \"High\",\n  \"subject\": \"Need ServiceNow ITSM consultant\",\n  \"details\": \"Looking for a senior consultant for a 3-month engagement.\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Dashboard counts",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "x-admin-token", "value": "{{adminToken}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/dashboard",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "admin", "dashboard"]
+            }
+          }
+        },
+        {
+          "name": "List leads",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "x-admin-token", "value": "{{adminToken}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/leads",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "admin", "leads"]
+            }
+          }
+        },
+        {
+          "name": "Update lead status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "x-admin-token", "value": "{{adminToken}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/leads",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "admin", "leads"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<lead-uuid-from-list>\",\n  \"status\": \"contacted\"\n}"
+            }
+          }
+        },
+        {
+          "name": "List resource requests",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "x-admin-token", "value": "{{adminToken}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/resource-requests",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "admin", "resource-requests"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3001" },
+    { "key": "adminToken", "value": "change-me-local-admin-token" }
+  ]
+}

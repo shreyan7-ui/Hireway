@@ -1,0 +1,18 @@
+{
+  "name": "@hireway/web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hireway Next.js frontend",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@nestjs/core": "12.0.3",
+    "next": "^16.3.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
