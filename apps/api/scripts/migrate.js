@@ -1,8 +1,11 @@
-require('dotenv').config();
+import 'dotenv/config';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { Client } from 'pg';
 
-const fs = require('fs');
-const path = require('path');
-const { Client } = require('pg');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function run() {
     const connectionString = process.env.SUPABASE_DB_URL;
@@ -24,7 +27,7 @@ async function run() {
     const dir = path.join(__dirname, '..', 'migrations');
     const files = fs
         .readdirSync(dir)
-        .filter(f => f.endsWith('.sql'))
+        .filter((f) => f.endsWith('.sql'))
         .sort();
 
     for (const file of files) {
@@ -37,7 +40,7 @@ async function run() {
     await client.end();
 }
 
-run().catch(err => {
+run().catch((err) => {
     console.error('[migrate] failed:', err.message);
     process.exit(1);
 });

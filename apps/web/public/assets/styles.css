@@ -29,6 +29,7 @@ body {
   background: var(--paper);
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 78px;
 }
 img,
 svg {
@@ -63,8 +64,11 @@ body:after {
   margin: auto;
 }
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 80;
   background: #f8fbffbf;
   backdrop-filter: blur(22px);
@@ -153,6 +157,93 @@ body:after {
   border: 1px solid var(--line);
   background: #ffffffcc;
   box-shadow: 0 10px 24px #07111f08;
+}
+.mobile-menu-btn {
+  display: none;
+  border: 1px solid #cbdcf4;
+  background: #ffffffcf;
+  color: var(--ink);
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  box-shadow: 0 10px 24px #07111f12;
+}
+.mobile-menu-line {
+  width: 16px;
+  height: 2px;
+  border-radius: 999px;
+  background: #122033;
+}
+.mobile-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  background: #06111f6e;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s;
+  z-index: 100;
+}
+.mobile-drawer-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(84vw, 320px);
+  height: 100vh;
+  background: #f7fbff;
+  border-left: 1px solid #d7e3f2;
+  box-shadow: -24px 0 60px #07111f26;
+  transform: translateX(104%);
+  transition: transform 0.24s ease;
+  z-index: 101;
+  padding: 20px 18px;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+.mobile-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.mobile-drawer-head strong {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+.mobile-drawer-close {
+  border: 1px solid #cfddf0;
+  background: #fff;
+  color: var(--ink);
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  font-size: 24px;
+  line-height: 1;
+}
+.mobile-drawer a {
+  display: block;
+  border: 1px solid #cfdef2;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #0b4fc4;
+  text-decoration: none;
+  background: #ffffffbd;
 }
 .eyebrow {
   font-size: 11px;
@@ -1091,6 +1182,9 @@ footer {
   }
 }
 @media (max-width: 1100px) {
+  body {
+    padding-top: 124px;
+  }
   .navin {
     flex-wrap: wrap;
     height: auto;
@@ -1149,26 +1243,49 @@ footer {
 }
 /* Common phone sizes: iPhone 14/15/16, Galaxy S/ A, plus small Androids */
 @media (max-width: 650px) {
+  body {
+    padding-top: 78px;
+  }
   .navin {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
     padding-top: 12px;
     padding-bottom: 12px;
   }
+  .brand img {
+    width: 106px;
+    height: 50px;
+    transform: none;
+  }
   .navcta {
+    order: 2;
     width: auto;
     margin-left: auto;
     padding: 10px 12px;
     font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  .mobile-menu-btn {
+    display: inline-flex;
+    order: 3;
+    margin-left: 8px;
   }
   .links {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 10px;
+    display: none;
+    width: auto;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 8px;
     font-size: 10px;
     letter-spacing: 0.08em;
-    order: 3;
+    order: 2;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .links a {
+    white-space: nowrap;
   }
   .wrap {
     width: min(92%, 540px);
@@ -1185,7 +1302,14 @@ footer {
     grid-template-columns: 1fr;
   }
   .footerin {
+    display: grid;
+    gap: 6px;
+    text-align: left;
+    justify-items: start;
+  }
+  .footerin span {
     display: block;
+    line-height: 1.45;
   }
   .hero {
     padding: 54px 0 40px;
@@ -1220,19 +1344,51 @@ footer {
     padding: 18px;
   }
   .contact-numbers div {
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .contact-numbers a {
+    margin-left: auto;
+    text-align: right;
+  }
+  .linkedin-icon {
+    width: 43px;
+    height: 43px;
   }
 }
 
 /* iPhone 12/13/14/15/16 portrait and many Android portrait devices */
 @media (max-width: 430px) {
+  .navin {
+    gap: 6px;
+  }
   .brand img {
-    width: 112px;
-    height: 54px;
+    width: 98px;
+    height: 46px;
     transform: none;
   }
-  .navcta,
+  .links {
+    gap: 6px;
+    font-size: 9px;
+  }
+  .nav .navcta {
+    width: auto;
+    padding: 8px 10px;
+    font-size: 0.72rem;
+  }
+  .mobile-menu-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+  .footerin {
+    gap: 4px;
+  }
+  .footerin span {
+    font-size: 12px;
+  }
   .btn {
     width: 100%;
   }

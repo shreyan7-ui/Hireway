@@ -1,8 +1,10 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function SiteChrome({ children }) {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
     useEffect(() => {
         const elements = document.querySelectorAll('.reveal');
 
@@ -205,13 +207,55 @@ export default function SiteChrome({ children }) {
                         <a href="/services">SERVICES</a>
                         {/* <a href="/clients">Clients</a> */}
                         {/* <a href="/careers">Careers</a> */}
-                        <a href="/resource-request">RESOURCE DESK/REQUIREMENT</a>
+                        <a href="/resource-request">RESOURCE DESK</a>
                     </div>
+
+                    <button
+                        className="mobile-menu-btn"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded={mobileMenuOpen}
+                        onClick={() => setMobileMenuOpen(true)}
+                    >
+                        <span className="mobile-menu-line" />
+                        <span className="mobile-menu-line" />
+                        <span className="mobile-menu-line" />
+                    </button>
 
                     <a className="navcta" href="/contact">
                         Talk to us
                     </a>
                 </div>
+
+                <button
+                    className={`mobile-drawer-backdrop ${mobileMenuOpen ? 'open' : ''}`}
+                    type="button"
+                    aria-label="Close menu"
+                    onClick={() => setMobileMenuOpen(false)}
+                />
+
+                <aside className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}>
+                    <div className="mobile-drawer-head">
+                        <strong>Menu</strong>
+
+                        <button
+                            className="mobile-drawer-close"
+                            type="button"
+                            aria-label="Close menu"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            ×
+                        </button>
+                    </div>
+
+                    <a href="/services" onClick={() => setMobileMenuOpen(false)}>
+                        SERVICES
+                    </a>
+
+                    <a href="/resource-request" onClick={() => setMobileMenuOpen(false)}>
+                        RESOURCE DESK
+                    </a>
+                </aside>
             </nav>
 
             {children}
@@ -223,7 +267,7 @@ export default function SiteChrome({ children }) {
                     </span>
 
                     <span>
-                        IT Services · Consulting · Workforce Solutions
+                        IT Services · Consulting · Workforce Solutions · Digital Marketing
                     </span>
                 </div>
             </footer>

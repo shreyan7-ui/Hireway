@@ -18,7 +18,7 @@ export default function HomePage() {
 
                 <div className="wrap">
                     <div className="eyebrow reveal">
-                        IT Services · Consulting · Workforce
+                        IT Services · Consulting · Workforce · Digital Marketing
                     </div>
 
                     <h1>

@@ -7,10 +7,21 @@ async function bootstrap() {
 
     app.setGlobalPrefix('api');
 
-    const origin = process.env.WEB_ORIGIN || 'http://localhost:3000';
+    const envOrigins = (process.env.WEB_ORIGIN || '')
+        .split(',')
+        .map((value) => value.trim())
+        .filter(Boolean);
+
+    const origins = Array.from(
+        new Set([
+            'http://localhost:3000',
+            'http://localhost:3002',
+            ...envOrigins
+        ])
+    );
 
     app.enableCors({
-        origin: [origin],
+        origin: origins,
         credentials: true,
         methods: ['GET', 'POST', 'PATCH', 'OPTIONS'],
         allowedHeaders: ['Content-Type', 'Authorization', 'x-admin-token']
@@ -28,7 +39,7 @@ async function bootstrap() {
     await app.listen(port);
 
     console.log(`\nHireway API running on http://localhost:${port}/api`);
-    console.log(`CORS allowed origin: ${origin}\n`);
+    console.log(`CORS allowed origins: ${origins.join(', ')}\n`);
 }
 
 bootstrap();
