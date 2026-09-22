@@ -219,7 +219,7 @@ export default function SiteChrome({ children }) {
             <footer>
                 <div className="wrap footerin">
                     <span>
-                        © 2026 HIREWAY Technologies
+                        © 2026 HIREWAY
                     </span>
 
                     <span>

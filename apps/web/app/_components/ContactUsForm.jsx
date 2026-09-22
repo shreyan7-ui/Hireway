@@ -66,8 +66,8 @@ export default function ContactUsForm() {
             <div className="contact-numbers">
                 <div>
                     <span>Email</span>
-                    <a href="mailto:vansh.a@hireway.com">
-                        vansh.a@hireway.com
+                    <a href="mailto:business@hireway.online">
+                        business@hireway.online
                     </a>
                 </div>
 
@@ -107,13 +107,30 @@ export default function ContactUsForm() {
                 readOnly
             />
 
-            <button
-                className="btn primary"
-                type="submit"
-                disabled={pending}
-            >
-                {pending ? 'Sending...' : 'Contact us'}
-            </button>
+            <div className="form-actions">
+                <button
+                    className="btn primary"
+                    type="submit"
+                    disabled={pending}
+                >
+                    {pending ? 'Sending...' : 'Contact us'}
+                </button>
+
+                <a
+                    className="linkedin-btn"
+                    href="https://www.linkedin.com/company/hireway1/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                >
+                    <img
+                        className="linkedin-icon"
+                        src="/assets/linkedin.png"
+                        alt="LinkedIn"
+                    />
+                </a>
+            </div>
 
             <div
                 className="notice"

@@ -27,15 +27,19 @@ export default function HomePage() {
 
                     <div className="hero-copy">
                         <p>
-                            At HIREWAY, we help organizations build stronger teams by connecting
-                            them with quality, skilled professionals tailored to their exact
-                            business and technical requirements.
+                            At HIREWAY, we provide resource augmentation services that help 
+                            organizations access skilled professionals across technologies and 
+                            business functions. From ServiceNow, SAP, Oracle, Java, and Python
+                             to other in-demand skills, we connect businesses with the right 
+                             talent based on their specific project and workforce requirements.
                         </p>
 
                         <p>
-                            We focus on more than just filling positions. We understand the
-                            requirement, identify the right expertise, and deliver profiles that
-                            align with it.
+                            We also provide digital marketing services to help businesses
+                            strengthen their online presence and build their brand. Our 
+                            solutions cover digital strategy, social media marketing, content
+                            creation, lead generation, SEO, and other digital initiatives
+                             designed to improve visibility and audience engagement.
                         </p>
 
                         <ul className="hero-points">
@@ -67,6 +71,60 @@ export default function HomePage() {
                         <p className="hero-closing">
                             Your requirement defines the need. Our network finds the professional.
                         </p>
+
+                        <div className="card tilt reveal digital-marketing-card">
+                            <h3>
+                                Digital Marketing
+                            </h3>
+                        </div>
+
+                        <ul className="hero-points">
+                            <li>
+                                <strong>Social Media Marketing</strong> - Build and manage your
+                                brand presence across LinkedIn, Instagram, Facebook and other
+                                platforms.
+                            </li>
+
+                            <li>
+                                <strong>LinkedIn Marketing</strong> - B2B outreach, professional
+                                branding, lead generation and audience engagement.
+                            </li>
+
+                            <li>
+                                <strong>Content Marketing</strong> - Create engaging blogs, posts,
+                                articles and business content.
+                            </li>
+
+                            <li>
+                                <strong>Search Engine Optimization (SEO)</strong> - Improve online
+                                visibility and organic search presence.
+                            </li>
+
+                            <li>
+                                <strong>Performance Marketing</strong> - Paid campaigns focused on
+                                leads, traffic and conversions.
+                            </li>
+
+                            <li>
+                                <strong>Lead Generation</strong> - Identify and attract potential
+                                clients through targeted digital campaigns.
+                            </li>
+
+                            <li>
+                                <strong>Employer Branding</strong> - Strengthen your company&apos;s
+                                online presence to attract both clients and talent.
+                            </li>
+
+                            <li>
+                                <strong>Email Marketing</strong> - Targeted campaigns for client
+                                engagement, promotions and business communication.
+                            </li>
+
+                            <li>
+                                <strong>Brand & Online Presence Management</strong> - Maintain a
+                                consistent and professional digital identity
+                            </li>
+                        </ul>
                     </div>
 
                     <div className="actions reveal">
