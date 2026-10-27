@@ -10,6 +10,7 @@ export default function ContactUsForm() {
             /> */}
 
             <div className="contact-numbers">
+                
                 <div>
                     <span>Email</span>
                     <a href="mailto:business@hireway.online">
@@ -17,19 +18,19 @@ export default function ContactUsForm() {
                     </a>
                 </div>
 
-                <div>
+                {/* <div>
                     <span>Phone</span>
                     <a href="tel:+918219284677">
                         +91 82192 84677
                     </a>
-                </div>
+                </div> */}
 
-                <div>
+                {/* <div>
                     <span>WhatsApp</span>
                     <a href="https://wa.me/916230627887">
                         +91 62306 27887
                     </a>
-                </div>
+                </div> */}
             </div>
 
             <div className="form-actions">

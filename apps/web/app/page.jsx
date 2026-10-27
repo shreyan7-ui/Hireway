@@ -366,10 +366,10 @@ export default function HomePage() {
                                 Let&rsquo;s connect.
                             </h2>
 
-                            <p className="reveal">
+                            {/* <p className="reveal">
                                 Share your name and email ID. Our team will contact
                                 you using the phone or WhatsApp number below.
-                            </p>
+                            </p> */}
                         </div>
 
                         <ContactUsForm />
