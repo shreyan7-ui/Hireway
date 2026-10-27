@@ -197,7 +197,7 @@ export default function SiteChrome({ children }) {
                 <div className="wrap navin">
                     <a className="brand" href="/">
                         <img
-                            src="/assets/startup-logo.png"
+                            src="/assets/logo.png"
                             alt="HIREWAY home"
                         />
                     </a>
@@ -222,9 +222,9 @@ export default function SiteChrome({ children }) {
                         <span className="mobile-menu-line" />
                     </button>
 
-                    <a className="navcta" href="/contact">
+                    {/* <a className="navcta" href="/contact">
                         Talk to us
-                    </a>
+                    </a> */}
                 </div>
 
                 <button
@@ -253,7 +253,7 @@ export default function SiteChrome({ children }) {
                     </a>
 
                     <a href="/resource-request" onClick={() => setMobileMenuOpen(false)}>
-                        RESOURCE DESK
+                        REQUEST DESK
                     </a>
                 </aside>
             </nav>
@@ -267,7 +267,7 @@ export default function SiteChrome({ children }) {
                     </span>
 
                     <span>
-                        IT Services · Consulting · Workforce Solutions · Digital Marketing
+                        Digital Marketing
                     </span>
                 </div>
             </footer>

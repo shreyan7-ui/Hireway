@@ -104,13 +104,15 @@ body:after {
   gap: 22px;
   font-size: 16px;
   font-weight: 800;
-  color: #0b5ee4;
+  color: var(--ink);
   letter-spacing:0.5px;
   align-items: center;
   font-family:Arial, sans-serif;
 }
 .links a {
   position: relative;
+  color: #000;
+  text-decoration: none;
 }
 .links a:after {
   content: "";
@@ -241,7 +243,7 @@ body:after {
   padding: 10px 12px;
   font-weight: 800;
   letter-spacing: 0.06em;
-  color: #0b4fc4;
+  color: #000;
   text-decoration: none;
   background: #ffffffbd;
 }

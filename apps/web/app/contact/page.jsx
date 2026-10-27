@@ -8,7 +8,7 @@ export const metadata = {
 export default function ContactPage() {
     return (
         <SiteChrome>
-            <section className="hero">
+            {/* <section className="hero">
                 <div className="wrap">
                     <div className="eyebrow reveal">
                         Contact
@@ -59,7 +59,7 @@ export default function ContactPage() {
                         <LeadForm />
                     </div>
                 </div>
-            </section>
+            </section> */}
         </SiteChrome>
     );
 }

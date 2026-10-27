@@ -49,34 +49,6 @@ export default function CardsPage({
                 </div>
             </section>
 
-            <section className="dark">
-                <div className="wrap">
-                    <div className="banner tilt reveal">
-                        <div className="eyebrow">
-                            Engage us
-                        </div>
-
-                        <h2>
-                            Need specialists for a live requirement?
-                        </h2>
-
-                        <p>
-                            Choose C2C, C2H or FTE and let our team build a focused shortlist.
-                        </p>
-
-                        <a
-                            className="btn"
-                            style={{
-                                background: 'white',
-                                color: '#07111f'
-                            }}
-                            href="/contact"
-                        >
-                            Talk to us →
-                        </a>
-                    </div>
-                </div>
-            </section>
         </SiteChrome>
     );
 }

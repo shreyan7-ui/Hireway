@@ -73,7 +73,7 @@ export default function ResourceRequestPage() {
         <SiteChrome>
             <section className="hero supporthero">
                 <div className="wrap">
-                    <div className="eyebrow reveal">
+                    {/* <div className="eyebrow reveal">
                         Client resource desk
                     </div>
 
@@ -93,7 +93,7 @@ export default function ResourceRequestPage() {
                         <span>
                             C2C · C2H · FTE
                         </span>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
@@ -177,11 +177,11 @@ export default function ResourceRequestPage() {
                             </div>
 
                             <div className="formrow">
-                                <input
+                                {/* <input
                                     name="company"
                                     placeholder="Company name"
                                     required
-                                />
+                                /> */}
 
                                 <input
                                     name="contact_name"
@@ -203,7 +203,7 @@ export default function ResourceRequestPage() {
                                 required
                             />
 
-                            <input
+                            {/* <input
                                 name="resource_name"
                                 type="number"
                                 min="1"
@@ -211,7 +211,7 @@ export default function ResourceRequestPage() {
                                 inputMode="numeric"
                                 placeholder="Total number of resources required"
                                 required
-                            />
+                            /> */}
 
                             <div className="budget-field">
                                 <input
@@ -224,7 +224,7 @@ export default function ResourceRequestPage() {
                                     required
                                 />
 
-                                <select
+                                {/* <select
                                     name="budget_unit"
                                     defaultValue=""
                                     required
@@ -237,7 +237,7 @@ export default function ResourceRequestPage() {
                                     <option>LPA</option>
                                     <option>Per hour</option>
                                     <option>Per day</option>
-                                </select>
+                                </select> */}
                             </div>
 
                             <select
@@ -247,21 +247,13 @@ export default function ResourceRequestPage() {
                                 required
                             >
                                 <option value="">
-                                    Skill Set
+                                    Query Title
                                 </option>
 
-                                <option>SAP</option>
-                                <option>ServiceNow</option>
-                                <option>Python</option>
-                                <option>UI/UX Developer</option>
-                                <option>Workday</option>
-                                <option>Salesforce</option>
-                                <option>Devops</option>
-                                <option>Microsoft Azure</option>
-                                <option>AI/ML</option>
-                                <option>Power BI</option>
-                                <option>Data Engineer</option>
-                                <option>Gen AI</option>
+                                <option>Video Editing</option>
+                                <option>Social Media Marketing</option>
+                                <option>Product Marketing</option>
+                                
                                 <option>Other</option>
                             </select>
 
@@ -305,7 +297,7 @@ export default function ResourceRequestPage() {
                                 </option>
                             </select>
 
-                            <div className="input-with-icon">
+                            {/* <div className="input-with-icon">
                                 <span aria-hidden="true">📍</span>
 
                                 <input
@@ -313,7 +305,7 @@ export default function ResourceRequestPage() {
                                     placeholder="Preferred Location"
                                     required
                                 />
-                            </div>
+                            </div> */}
 
                             <div className="date-field">
                                 <label htmlFor="requirement-date">
@@ -330,7 +322,7 @@ export default function ResourceRequestPage() {
 
                             <textarea
                                 name="details"
-                                placeholder="Job Description"
+                                placeholder="Your Query"
                                 required
                             ></textarea>
 
@@ -365,7 +357,7 @@ export default function ResourceRequestPage() {
 
             <section className="dark">
                 <div className="wrap">
-                    <div className="banner tilt reveal">
+                    {/* <div className="banner tilt reveal">
                         <div className="eyebrow">
                             Need a new resource instead?
                         </div>
@@ -389,7 +381,7 @@ export default function ResourceRequestPage() {
                         >
                             Raise hiring requirement ↗
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </SiteChrome>

@@ -12,26 +12,39 @@ export default function ServicesPage() {
             intro={
                 <>
                     <div className="service-intro-item">
-                        <strong>IT Resource Augmentation</strong>
-                        <span>Skilled professionals to strengthen your existing teams and support ongoing projects.</span>
+                        <strong>Social Media Management</strong>
+                        <span>End-to-end management across Instagram, YouTube, 
+                            Facebook, and LinkedIn covering content creation, 
+                            scheduling, community engagement,and monthly performance
+                            analytics.</span>
                     </div>
                     <div className="service-intro-item">
-                        <strong>Specialized IT Talent</strong>
-                        <span>Professionals across ServiceNow, Cloud, Data, DevOps, Software Development, Testing, Cybersecurity and other technology areas.</span>
+                        <strong>Video Editing & Content Production</strong>
+                        <span>Complete video production and editing—covering Reels,
+                             long-form YouTube content, promotional brand films, 
+                             podcasts, motion graphics, and AI-assisted production.</span>
                     </div>
                     <div className="service-intro-item">
-                        <strong>Requirement-Based Talent Solutions</strong>
-                        <span>Profiles matched according to your required skill set, experience, location, availability and project requirements.</span>
+                        <strong>Hotel, Restaurant & Café Marketing</strong>
+                        <span>End-to-end hotel, restaurant, and café marketing
+                            covering food, menu, and ambience photography, 
+                            dish-focused Reels, local SEO, influencer campaigns,
+                            and booking lead generation.</span>
                     </div>
                     <div className="service-intro-item">
-                        <strong>Pan-India Resource Support</strong>
-                        <span>Access to qualified professionals across India for remote, hybrid and location-specific requirements.</span>
+                        <strong>Product Marketing & Brand Promotion</strong>
+                        <span>End-to-end product marketing across tech, food,
+                            and beauty brands—covering commercial photography,
+                            brand storytelling, influencer-led launches, 
+                            and e-commerce marketplace support.</span>
                     </div>
                     <div className="service-intro-item">
-                        <strong>Project-Based Staffing</strong>
-                        <span>Helping organizations quickly scale their teams for short-term or long-term project requirements.</span>
+                        <strong>Sales & Business Development on Contract</strong>
+                        <span>Dedicated outsourced sales and business development—covering
+                            targeted B2B lead generation, appointment setting, distributor
+                            and channel partner acquisition, and complete pipeline management.</span>
                     </div>
-                    <div className="service-intro-item">
+                    {/* <div className="service-intro-item">
                         <strong>C2H, FTE &amp; C2C Staffing</strong>
                         <span>Flexible engagement models designed to support changing business and project demands.</span>
                     </div>
@@ -50,40 +63,35 @@ export default function ServicesPage() {
                     <div className="service-intro-item">
                         <strong>Workforce Scaling</strong>
                         <span>Helping organizations scale their teams up or down based on business and project needs.</span>
-                    </div>
+                    </div> */}
                 </>
             }
             cards={[
                 [
-                    'SN',
-                    'ServiceNow',
-                    'ITSM, ITOM, HRSD, ITAM, CMDB, CSM, SecOps, IRM/GRC and SPM.'
+                    'HSPTY',
+                    'Hospitality',
+                    'Luxury hotels, resorts, boutique properties, restaurants, cafés, cloud kitchens and wedding venues..'
                 ],
                 [
-                    'AI',
-                    'AI & Automation',
-                    'Now Assist, GenAI, workflow automation and intelligent service experiences.'
+                    'FMCG',
+                    'FMCG, Dairy & Food Brands',
+                    'Dairy products, ghee, honey, packaged foods, organic products and regional specialties.'
                 ],
                 [
-                    'BA',
-                    'Business Analysis',
-                    'Discovery, process mapping, BRD/FRD, UAT and stakeholder alignment.'
+                    'IT Tech',
+                    'IT & Technology',
+                    'SaaS companies, IT service providers, software startups and technology product businesses.'
                 ],
                 [
-                    'DEV',
-                    'Engineering',
-                    'Developers, integrations, custom applications and platform engineering.'
+                    'BL',
+                    'Beauty & Lifestyle',
+                    'Cosmetics, skincare, makeup, salons, fashion and wellness brands.'
                 ],
-                [
-                    'QA',
-                    'Quality Engineering',
-                    'Functional, automation, performance and release validation.'
-                ],
-                [
-                    'PM',
-                    'Delivery Leadership',
-                    'Project managers, architects and program specialists for transformation initiatives.'
-                ]
+                // [
+                //     'QA',
+                //     'Quality Engineering',
+                //     'Functional, automation, performance and release validation.'
+                // ]
             ]}
         />
     );

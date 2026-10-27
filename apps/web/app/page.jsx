@@ -11,65 +11,40 @@ export default function HomePage() {
             <header className="hero">
                 <div className="hero-logo-watermark" aria-hidden="true">
                     <img
-                        src="/assets/startup-logo.png"
+                        src="/assets/logo.png"
                         alt=""
                     />
                 </div>
 
                 <div className="wrap">
                     <div className="eyebrow reveal">
-                        IT Services · Consulting · Workforce · Digital Marketing
+                        Digital Marketing Agency
                     </div>
 
                     <h1>
-                        Enterprise technology teams, built for momentum.
+                        Hireway — Digital Marketing & Business Growth
                     </h1>
 
                     <div className="hero-copy">
                         <p>
-                            At HIREWAY, we provide resource augmentation services that help 
-                            organizations access skilled professionals across technologies and 
-                            business functions. From ServiceNow, SAP, Oracle, Java, and Python
-                             to other in-demand skills, we connect businesses with the right 
-                             talent based on their specific project and workforce requirements.
+                            Hireway is an integrated digital marketing and commercial growth
+                            partner built for hospitality, technology, and consumer brands.
                         </p>
 
                         <p>
-                            We also provide digital marketing services to help businesses
-                            strengthen their online presence and build their brand. Our 
-                            solutions cover digital strategy, social media marketing, content
-                            creation, lead generation, SEO, and other digital initiatives
-                             designed to improve visibility and audience engagement.
+                            Create: Studio-grade Reels, brand films, and commercial photography
+                            that establish immediate market authority.
                         </p>
 
-                        <ul className="hero-points">
-                            <li>
-                                <strong>Pan-India Talent Reach</strong>
-                                Professionals available across major locations in India.
-                            </li>
-                            <li>
-                                <strong>Requirement-Based Hiring</strong>
-                                Profiles aligned with your specific skill set, experience, and
-                                project needs.
-                            </li>
-                            <li>
-                                <strong>Quality-First Approach</strong>
-                                Relevant and reliable profiles rather than bulk submissions.
-                            </li>
-                            <li>
-                                <strong>Specialized IT Talent</strong>
-                                Professionals across diverse technologies, platforms, and business
-                                functions.
-                            </li>
-                            <li>
-                                <strong>Flexible Resource Support</strong>
-                                Helping organizations scale teams based on project and business
-                                requirements.
-                            </li>
-                        </ul>
+                        <p>
+                            Amplify: Strategic social media management, local SEO, and targeted
+                            influencer campaigns engineered to expand market reach.
+                        </p>
 
-                        <p className="hero-closing">
-                            Your requirement defines the need. Our network finds the professional.
+                        <p>
+                            Convert: Dedicated B2B sales outreach, channel distributor
+                            acquisition, and direct booking engines that turn visibility into
+                            closed revenue.
                         </p>
 
                         <div className="card tilt reveal digital-marketing-card">
@@ -128,36 +103,15 @@ export default function HomePage() {
                     </div>
 
                     <div className="actions reveal">
-                        <a className="btn primary" href="/contact">
+                        {/* <a className="btn primary" href="/contact">
                             Request professionals <span>↗</span>
-                        </a>
+                        </a> */}
 
                         <a className="btn secondary" href="/services">
                             Explore services
                         </a>
                     </div>
 
-                    <div className="stats">
-                        {/* <div className="stat tilt reveal">
-                            <b>150+</b>
-                            <span>Technology professionals</span>
-                        </div> */}
-
-                        <div className="stat tilt reveal">
-                            <b>25+</b>
-                            <span>Technology capabilities</span>
-                        </div>
-
-                        <div className="stat tilt reveal">
-                            <b>3</b>
-                            <span>Engagement models</span>
-                        </div>
-
-                        <div className="stat tilt reveal">
-                            <b>24–72h</b>
-                            <span>Typical profile turnaround</span>
-                        </div>
-                    </div>
                 </div>
             </header>
 
@@ -167,8 +121,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section>
-                <div className="wrap">
+            {/* <div className="wrap">
                     <div className="head reveal">
                         <div className="eyebrow">
                             Why HIREWAY
@@ -225,8 +178,7 @@ export default function HomePage() {
                             </p>
                         </div>
                     </div>
-                </div>
-            </section>
+                </div> */}
 
             <section className="dark">
                 <div className="wrap">
@@ -248,52 +200,56 @@ export default function HomePage() {
                     <div className="models">
                         <div className="model tilt reveal">
                             <strong>
-                                C2C
+                                MR
                             </strong>
 
                             <h3>
-                                Contract to Contract
+                                Monthly Retainers:
                             </h3>
 
                             <p>
-                                Flexible specialists for project-based or ongoing
-                                requirements.
+                               Continuous social media management, 
+                               regular video/content production, 
+                               local SEO, and brand growth.
                             </p>
                         </div>
 
                         <div className="model tilt reveal">
                             <strong>
-                                C2H
+                                PBS
                             </strong>
 
                             <h3>
-                                Contract to Hire
+                                Project-Based Sprints:
                             </h3>
 
                             <p>
-                                Evaluate talent in a contract engagement before
-                                long-term conversion.
+                                Fixed-scope execution for product launches,
+                                brand films, commercial photography, 
+                                and seasonal campaigns.
                             </p>
                         </div>
 
                         <div className="model tilt reveal">
                             <strong>
-                                FTE
+                                DOT
                             </strong>
 
                             <h3>
-                                Full-Time Employee
+                                Dedicated Outsourced Teams:
                             </h3>
 
                             <p>
-                                Permanent technology hiring for critical roles and teams.
+                               Contract-based commercial teams driving 
+                               targeted B2B lead generation, appointment setting,
+                                and channel distribution.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
+            {/* <section>
                 <div className="wrap">
                     <div className="banner tilt reveal">
                         <div className="eyebrow">
@@ -321,10 +277,9 @@ export default function HomePage() {
                         </a>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            <section>
-                <div className="wrap">
+            {/* <div className="wrap">
                     <div className="banner tilt reveal">
                         <div className="eyebrow">
                             Ready to scale?
@@ -351,8 +306,7 @@ export default function HomePage() {
                             Start a requirement ↗
                         </a>
                     </div>
-                </div>
-            </section>
+                </div> */}
 
             <section>
                 <div className="wrap">
